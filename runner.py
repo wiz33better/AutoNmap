@@ -57,7 +57,7 @@ def run_scan(target: str, timeout: int = 120) -> ScanResult:
     nmap_path = get_nmap_path()
     command = [nmap_path, *DEFAULT_ARGS, target]
 
-    start = time.monotionic()
+    start = time.monotonic()
     try:
         proc = subprocess.run(
             command,
