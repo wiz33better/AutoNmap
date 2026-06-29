@@ -92,12 +92,5 @@ def run_scan(target: str, timeout: int = 120) -> ScanResult:
             stdout="", stderr="", duration=duration, 
             success=False, error=f"Unexpected error: {e}"
         )
-if __name__ == "__main__":
-    result = run_scan("scanme.nmap.org")
-    print("Success: ", result.success)
-    print("Duration: ", result.duration)
-    if result.success:
-        print(result.stdout[:500])
-    else:
-        print("Error: ", result.error)
+
     
